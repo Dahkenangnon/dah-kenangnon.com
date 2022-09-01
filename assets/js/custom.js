@@ -81,17 +81,15 @@ function applyRandomBackground() {
 applyRandomBackground();
 
 
-// C
-
-// var now = moment(new Date()); //todays date
-// var end = moment("2015-12-1"); // another date
-// var duration = moment.duration(now.diff(end));
-// var days = duration.asDays();
-// console.log(days)
-
-
+// Humanity
+let seconds_past_i_born = document.getElementById('seconds_past_i_born');
+window.setInterval(function () {
+    let startTime = moment('22-05-1997 00:00:00', 'DD-MM-YYYY hh:mm:ss');
+    let endTime = moment(new Date(), 'DD-MM-YYYY hh:mm:ss');
+    seconds_past_i_born.innerHTML = endTime.diff(startTime, 'seconds');
+}, 1000);
 /*-------------------------
-	Other 
+    Other 
 
     Neumorphism UI from: https://themesberg.com | https://www.themesberg.com/licensing#mit)
     

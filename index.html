@@ -293,25 +293,10 @@
     <!--JS -->
     <script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./assets/js/neumorphism.js"></script>
-    <script src="./assets/js/custom.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
         referrerpolicy="no-referrer"></script>
-
-    <script type="text/javascript">
-
-
-
-        let seconds_past_i_born = document.getElementById('seconds_past_i_born');
-        window.setInterval(function () {
-            let startTime = moment('22-05-1997 00:00:00', 'DD-MM-YYYY hh:mm:ss');
-            let endTime = moment(new Date(), 'DD-MM-YYYY hh:mm:ss');
-            seconds_past_i_born.innerHTML = endTime.diff(startTime, 'seconds');
-        }, 1000);
-
-    </script>
-
-
+    <script src="./assets/js/custom.js"></script>
 </body>
 
 </html>
