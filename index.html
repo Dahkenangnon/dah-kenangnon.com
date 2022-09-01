@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Justin Dah-kenangnon</title>
@@ -65,8 +66,7 @@
 
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="papers.html" 
-                        class="btn btn-primary text-secondary status-bg d-md-inline-block mr-3">
+                    <a href="papers.html" class="btn btn-primary text-secondary status-bg d-md-inline-block mr-3">
                         Checkout My White Papers</a>
                 </div>
             </div>
@@ -79,8 +79,20 @@
                     <div class="col-12 col-lg-8 text-center">
                         <!--Welcome -->
                         <h1 class="display-2 mb-4">Justin Dah-kenangnon</h1>
+
+                        <div id="welcome_humanity"><small>On earth since</small> <strong id="seconds_past_i_born"
+                                class=" badge badge-success text-uppercase"></strong> Seconds.
+                            <small>Given sense to this random adventure by doing: <i
+                                    class="fa fa-arrow-down"></i></small>
+                            <hr>
+                        </div>
                         <p class="lead mb-5 status-bg">#Engineering &period; #Web &period; #IAM &period; #Internet
                             Standards &period; #Filmaking &period;</p>
+                        <div id="bye_humanity">
+                            <small>Departure for the other unknown world is scheduled for:</small> <strong
+                                class="g badge badge-danger text-uppercase">undefined timestamp</strong>.
+                            <hr>
+                        </div>
                         <!--Clock -->
                         <div id="clock" class="status-bg">
                             <div class="hour">
@@ -249,7 +261,7 @@
                                         <span aria-hidden="true" class="fab fa-facebook-f"></span>
                                     </button></a>
 
-    
+
                                 <a href="https://blog.dah-kenangnon.com/" target="_blank">
 
                                     <button class=" btn btn-primary btn-icon-only text-anchor mr-2" type="button"
@@ -263,7 +275,7 @@
             </div>
         </section>
     </main>
-    
+
     <!--Footer -->
     <footer class="d-flex pb-2 pt-2 pt-md-2 border-top border-light bg-primary status-bg">
         <div class="container">
@@ -282,6 +294,24 @@
     <script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./assets/js/neumorphism.js"></script>
     <script src="./assets/js/custom.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
+        referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+
+
+
+        let seconds_past_i_born = document.getElementById('seconds_past_i_born');
+        window.setInterval(function () {
+            let startTime = moment('22-05-1997 00:00:00', 'DD-MM-YYYY hh:mm:ss');
+            let endTime = moment(new Date(), 'DD-MM-YYYY hh:mm:ss');
+            seconds_past_i_born.innerHTML = endTime.diff(startTime, 'seconds');
+        }, 1000);
+
+    </script>
+
+
 </body>
 
 </html>
