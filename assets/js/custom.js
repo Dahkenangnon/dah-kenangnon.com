@@ -80,13 +80,37 @@ function applyRandomBackground() {
 }
 applyRandomBackground();
 
+function convertToInternationalCurrencySystem(labelValue) {
+    // Nine Zeroes for Billions
+    return Math.abs(Number(labelValue)) >= 1.0e+9
+
+        ? (Math.abs(Number(labelValue)) / 1.0e+9).toFixed(2) + "B"
+        // Six Zeroes for Millions 
+        : Math.abs(Number(labelValue)) >= 1.0e+6
+
+            ? (Math.abs(Number(labelValue)) / 1.0e+6).toFixed(2) + "M"
+            // Three Zeroes for Thousands
+            : Math.abs(Number(labelValue)) >= 1.0e+3
+
+                ? (Math.abs(Number(labelValue)) / 1.0e+3).toFixed(2) + "K"
+
+                : Math.abs(Number(labelValue));
+
+}
+
+
 
 // Humanity
 let seconds_past_i_born = document.getElementById('seconds_past_i_born');
+let seconds_past_i_born_formated = document.getElementById('seconds_past_i_born_formated');
+
 window.setInterval(function () {
     let startTime = moment('22-05-1997 00:00:00', 'DD-MM-YYYY hh:mm:ss');
     let endTime = moment(new Date(), 'DD-MM-YYYY hh:mm:ss');
+    seconds_past_i_born_formated.innerHTML = convertToInternationalCurrencySystem(endTime.diff(startTime, 'seconds'));
+
     seconds_past_i_born.innerHTML = endTime.diff(startTime, 'seconds');
+
 }, 1000);
 /*-------------------------
     Other 
