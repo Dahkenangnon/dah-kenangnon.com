@@ -33,17 +33,20 @@
                 -moz-box-shadow: 0px -1px 5px 0px rgba(255, 255, 255, 0.2);
 
 
- 
+
                 box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
                 -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
                 -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
-                
+
+                opacity: 0.9;
+
             }
 
             .navbar-brand {
                 color: #fff;
                 font-size: 24px;
                 font-weight: bold;
+               
             }
 
             .navbar-brand:hover {
@@ -98,7 +101,7 @@
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                
+
 
                 background-color: #f0f0f0 !important;
                 padding: 20px !important;
@@ -126,10 +129,15 @@
                 overflow: hidden;
                 margin: 0 auto;
                 margin-top: 100px;
-                border: 5px solid #fff;
+                border: 5px solid #363333;
                 box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
                 -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
                 -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+
+            }
+
+            .author-picture-container:hover {
+                border-color: #f60d0d;
             }
 
             .author-picture-container .circle-avatar {
@@ -137,6 +145,10 @@
                 height: 100%;
                 object-fit: cover;
             }
+
+            .author-picture-container .circle-avatar:hover {
+                opacity: 0.7;
+             }
 
 
             .social-icon {
@@ -146,31 +158,148 @@
                 padding: 20px !important;
             }
 
+            .social-icon:hover {
+                color: #f60d0d;
+            }
+
             .social-media-container {
                 margin-top: 40px;
                 margin-bottom: 90px !important;
             }
 
-            .content { 
+            .tiny-promo {
+                color: #000;
+                margin-top: 20px;
             }
+
+            .tiny-promo a {
+                color: #f60d0d;
+                font-weight: bold;
+            }
+
+            .tiny-promo .tiny-promo-sub {
+                color: #000;
+                font-size: 12px;
+                font-weight: normal;
+            }
+
+            .tiny-promo .tiny-promo-action {
+                color: #f60d0d;
+                font-size: 12px;
+                font-weight: bold;
+            }
+
+
+            /* The Modal (background) */
+            .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 1;
+                /* Sit on top */
+                padding-top: 100px;
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.9);
+                /* Black w/ opacity */
+            }
+
+            /* Modal Content (Image) */
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+            }
+
+            /* Caption of Modal Image (Image Text) - Same Width as the Image */
+            #caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+
+            /* Add Animation - Zoom in the Modal */
+            .modal-content,
+            #caption {
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+            @keyframes zoom {
+                from {
+                    transform: scale(0)
+                }
+
+                to {
+                    transform: scale(1)
+                }
+            }
+
+            /* The Close Button */
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px) {
+                .modal-content {
+                    width: 100%;
+                }
+            }
+ 
+            #referalcode {
+                color: #f60d0d;
+                font-weight: bold;
+            }
+
         </style>
     </head>
 
     <body>
         <nav class="navbar">
             <div class="container">
-                <a class="navbar-brand" href="#">Justin Dah-kenangnon</a>
+                <a class="navbar-brand" href="#">_ |-| _&nbsp; Justin Dah-kenangnon</a>
 
-                <p class="author-title">Math Engineer & Software Developer</p>
+                <p class="author-title">Applied Math Engineer & Software Developer</p>
             </div>
         </nav>
 
-       
+
         <section class="content">
-            
+
             <div class="hero">
+                
                 <div class="author-picture-container">
-                    <img src="assets/img/me4.jpg" alt="" class="circle-avatar">
+                    <img id="circle-avatar" src="assets/img/me4.jpg" alt="Justin Dah-kenangnon" class="circle-avatar">
                 </div>
             </div>
             <div class="container">
@@ -179,9 +308,6 @@
                     <p>Hi ! I'm Justin Dah-kenangnon, software developer and applied math engineer.</p>
                 </div>
 
-              
-
-                <!-- Social media icons font-awesome: github, twitter, youtube, email -->
                 <div class="social-media mt-2 mb-2 text-center">
                     <a href="https://github.com/Dahkenangnon" target="_blank" class="social-icon">
                         <i class="fab fa-github"></i>
@@ -189,7 +315,7 @@
                     <a href="https://twitter.com/Dahkenangnon" target="_blank" class="social-icon">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://youtube.com/Dahkenangnon" target="_blank" class="social-icon">
+                    <a href="https://youtube.com/@Dahkenangnon" target="_blank" class="social-icon">
                         <i class="fab fa-youtube"></i>
                     </a>
                     <a href="mailto:dah.kenangnon@gmail.com" target="_blank" class="social-icon">
@@ -201,10 +327,67 @@
         </section>
 
 
-
         <footer class="footer mt-5">
-            <p>&copy; 2023 Justin Dah-kenangnon</p>
+            <div class="tiny-promo">
+                <p class="tiny-promo-sub">Since 2019, I'm using Hostinger for hosting and I really appreciate their
+                    customer service and high service quality.</p>
+                <p class="tiny-promo-action">Try Hostinger Now: <a href="https://hostinger.fr/?REFERRALCODE=1JUSTIN39"
+                        target="_blank" rel="noopener noreferrer">https://hostinger.fr/?REFERRALCODE=1JUSTIN39</a></p>
+
+                <small>You'll get some reductions and I'll gained some comission!</small>
+                <hr>
+            </div>
+            <p>&copy; 2023 Justin Dah-kenangnon <a id="referalcode" href="https://hostinger.fr/?REFERRALCODE=1JUSTIN39" target="_blank"
+                    rel="noopener noreferrer"> | Try Hostinger</a></p>
         </footer>
+
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="image-box">
+            <div id="caption"></div>
+        </div>
+
     </body>
+
+    <script>
+        
+
+        const footer = document.querySelector('.footer');
+        const tinyPromo = document.querySelector('.tiny-promo');
+        tinyPromo.style.display = 'none';
+
+        footer.addEventListener('mouseover', () => {
+            tinyPromo.style.display = 'block';
+        });
+
+        footer.addEventListener('mouseout', () => {
+            tinyPromo.style.display = 'none';
+        });
+
+        const socialIcons = document.querySelectorAll('a');
+        socialIcons.forEach((socialIcon) => {
+            socialIcon.addEventListener('click', () => {
+                alert('Dah-kenangnon.com:  The link will open in a new tab');
+            });
+        });
+
+
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("circle-avatar");
+        var modalImg = document.getElementById("image-box");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
 
 </html>
