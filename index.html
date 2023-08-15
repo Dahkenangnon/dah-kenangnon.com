@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
     <head>
         <meta charset="UTF-8">
@@ -9,10 +9,10 @@
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://Dah-kenangnon.com/">
         <meta property="og:site_name" content="Justin Dah-kenangnon">
-        <meta property="og:locale" content="fr_FR">
+        <meta property="og:locale" content="en">
         <meta property="author" content="Justin Dah-kenangnon">
         <meta property="og:description" content="Applied Math Engineer & Software Developer">
-        <meta property="og:image" content="/assets/img/me2.jpg">
+        <meta property="og:image" content="./assets/img/me.png">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <style>
@@ -299,7 +299,7 @@
             <div class="hero">
                 
                 <div class="author-picture-container">
-                    <img id="circle-avatar" src="assets/img/me4.jpg" alt="Justin Dah-kenangnon" class="circle-avatar">
+                    <img id="circle-avatar" src="assets/img/me.png" alt="Justin Dah-kenangnon" class="circle-avatar">
                 </div>
             </div>
             <div class="container">
@@ -328,17 +328,7 @@
 
 
         <footer class="footer mt-5">
-            <div class="tiny-promo">
-                <p class="tiny-promo-sub">Since 2019, I'm using Hostinger for hosting and I really appreciate their
-                    customer service and high service quality.</p>
-                <p class="tiny-promo-action">Try Hostinger Now: <a href="https://hostinger.fr/?REFERRALCODE=1JUSTIN39"
-                        target="_blank" rel="noopener noreferrer">https://hostinger.fr/?REFERRALCODE=1JUSTIN39</a></p>
-
-                <small>You'll get some reductions and I'll gained some comission!</small>
-                <hr>
-            </div>
-            <p>&copy; 2023 Justin Dah-kenangnon <a id="referalcode" href="https://hostinger.fr/?REFERRALCODE=1JUSTIN39" target="_blank"
-                    rel="noopener noreferrer"> | Try Hostinger</a></p>
+            <p>&copy; 2023 Justin Dah-kenangnon </p>
         </footer>
 
 
@@ -355,16 +345,7 @@
         
 
         const footer = document.querySelector('.footer');
-        const tinyPromo = document.querySelector('.tiny-promo');
-        tinyPromo.style.display = 'none';
-
-        footer.addEventListener('mouseover', () => {
-            tinyPromo.style.display = 'block';
-        });
-
-        footer.addEventListener('mouseout', () => {
-            tinyPromo.style.display = 'none';
-        });
+        
 
         const socialIcons = document.querySelectorAll('a');
         socialIcons.forEach((socialIcon) => {
