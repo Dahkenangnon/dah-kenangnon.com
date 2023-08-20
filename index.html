@@ -6,15 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Justin Dah-kenangnon</title>
         <meta property="og:title" content="Justin Dah-kenangnon">
+        <meta name="description" content="I design and build software people will love and use">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://Dah-kenangnon.com/">
         <meta property="og:site_name" content="Justin Dah-kenangnon">
         <meta property="og:locale" content="en">
         <meta property="author" content="Justin Dah-kenangnon">
-        <meta property="og:description" content="Applied Math Engineer & Software Developer">
-        <meta property="og:image" content="./assets/img/me.png">
-        <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <meta property="og:description" content="I design and build software people will love and use">
+        <meta property="og:image" content="assets/img/me.png">
+        <link rel="icon" type="image/png" href="assets/img/me.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -39,6 +42,7 @@
                 -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
 
                 opacity: 0.9;
+                box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
             }
 
@@ -46,7 +50,7 @@
                 color: #fff;
                 font-size: 24px;
                 font-weight: bold;
-               
+
             }
 
             .navbar-brand:hover {
@@ -67,14 +71,29 @@
                 .navbar .author-title {
                     display: none;
                 }
+
+            }
+
+            /** On mobile, hide .brand-name and center .brand-logo in .navbar*/
+            @media (max-width: 768px) {
+                .navbar .brand-name {
+                    display: none;
+                }
+
+                .navbar .brand-logo {
+                    display: block;
+                    margin: auto;
+
+                }
+
+                .navbar-brand {
+                    margin: auto;
+                }
             }
 
 
             .content {
-                background-image: url();
-                background-size: cover;
-                background-position: center;
-                height: 50vh;
+                height: 100%;
                 /* Adjusted to full viewport height */
                 display: flex;
                 flex-direction: column;
@@ -82,6 +101,10 @@
                 align-items: center;
                 text-align: center;
                 color: #000;
+                color: white !important;
+                font-family: Arial, sans-serif;
+                overflow-y: scroll !important;
+
 
             }
 
@@ -89,31 +112,41 @@
                 font-size: 48px;
                 font-weight: bold;
                 margin-bottom: 20px;
+
             }
 
             .content p {
-                font-size: 16px;
+                font-size: 20px;
                 margin-bottom: 40px;
+            }
+
+            .bg-primary {
+                background-color: #2f4338 !important;
+                border-radius: 10px;
+                color: white !important;
+                /** Background color fit text content width */
+                display: inline-block;
+                padding: 10px 20px;
+
             }
 
             .footer {
 
-                left: 0;
-                bottom: 0;
-                width: 100%;
-
-
                 background-color: #f0f0f0 !important;
-                padding: 20px !important;
+
                 text-align: center;
                 box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
                 -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
                 -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
                 position: fixed;
                 left: 0;
                 bottom: 0;
+                margin-bottom: 0 !important;
                 width: 100%;
-                text-align: center;
+                padding: 20px !important;
+
 
             }
 
@@ -129,11 +162,10 @@
                 overflow: hidden;
                 margin: 0 auto;
                 margin-top: 100px;
-                border: 5px solid #363333;
-                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+                border: 5px solid white;
                 -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
                 -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             }
 
             .author-picture-container:hover {
@@ -147,46 +179,25 @@
             }
 
             .author-picture-container .circle-avatar:hover {
-                opacity: 0.7;
-             }
-
-
-            .social-icon {
-                color: #000;
-                font-size: 24px;
-                margin-right: 20px;
-                padding: 20px !important;
+                opacity: 0.6;
             }
 
-            .social-icon:hover {
-                color: #f60d0d;
+            /** On mobile, decrease .author-picture-container size */
+            @media (max-width: 768px) {
+                .author-picture-container {
+                    width: 150px;
+                    height: 150px;
+                    margin-top: 50px;
+                }
             }
 
-            .social-media-container {
-                margin-top: 40px;
-                margin-bottom: 90px !important;
-            }
-
-            .tiny-promo {
-                color: #000;
-                margin-top: 20px;
-            }
-
-            .tiny-promo a {
-                color: #f60d0d;
-                font-weight: bold;
-            }
-
-            .tiny-promo .tiny-promo-sub {
-                color: #000;
-                font-size: 12px;
-                font-weight: normal;
-            }
-
-            .tiny-promo .tiny-promo-action {
-                color: #f60d0d;
-                font-size: 12px;
-                font-weight: bold;
+            /** When width size is less than 450px, decrease .author-picture-container size */
+            @media (max-width: 450px) {
+                .author-picture-container {
+                    width: 50px;
+                    height: 50px;
+                    margin-top: 50px;
+                }
             }
 
 
@@ -275,61 +286,140 @@
                     width: 100%;
                 }
             }
- 
+
             #referalcode {
                 color: #f60d0d;
                 font-weight: bold;
             }
 
+            body {
+
+                background-image: url(assets/img/congres.jpg) !important;
+                background-repeat: no-repeat !important;
+
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            #custom-alert {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #f0f0f0;
+                border: 1px solid #ddd;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 10px;
+                max-width: 300px;
+                text-align: center;
+                border-radius: 10px;
+                border-width: 3px;
+                border-color: #2f4338;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+            }
+
+            .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+            }
+
+            .alert-content {
+                padding: 20px;
+            }
+
+
+            .social-icon:hover {
+                color: #f60d0d;
+            }
+
+            .social-media {
+                box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            }
+
+
+            @media (max-width: 768px) {
+                .social-icon {
+                    font-size: 16px;
+                    margin-right: 10px;
+                    padding: 10px !important;
+                    border-color: white !important;
+                    border-radius: 50% !important;
+                }
+            }
+
+
+
+            .social-icon {
+                color: white;
+                font-size: 20px;
+                border-color: white !important;
+                border-radius: 50% !important;
+            }
         </style>
     </head>
 
     <body>
+
+
         <nav class="navbar">
             <div class="container">
-                <a class="navbar-brand" href="#">_ |-| _&nbsp; Justin Dah-kenangnon</a>
+                <a class="navbar-brand" href="/">
+                    <span class="brand-logo"> _ |-| _&nbsp;</span>
+                    <span class="brand-name">Dah-kenangnon</span></a>
 
-                <p class="author-title">Applied Math Engineer & Software Developer</p>
+                <p class="author-title">Design & Build Software</p>
             </div>
         </nav>
+        <main>
+            <section class="content">
 
+                <div class="hero">
 
-        <section class="content">
-
-            <div class="hero">
-                
-                <div class="author-picture-container">
-                    <img id="circle-avatar" src="assets/img/me.png" alt="Justin Dah-kenangnon" class="circle-avatar">
+                    <div class="author-picture-container">
+                        <img id="circle-avatar" src="assets/img/me.png" alt="Justin Dah-kenangnon"
+                            class="circle-avatar">
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="mt-2 text-center">
-                    <h2>Justin Dah-kenangnon</h2>
-                    <p>Hi ! I'm Justin Dah-kenangnon, software developer and applied math engineer.</p>
+                <div class="container">
+                    <div class="mt-2 text-center">
+                        <h2 class="bg-primary">Justin Dah-kenangnon</h2>
+                        <br>
+                        <p class="bg-primary">When I'm not coding, I read tech or financial articles or watch
+                            movies.
+                        </p>
+                    </div>
+                    <div class="bg-primary social-media text-center">
+                        <a href="https://github.com/Dahkenangnon" target="_blank" class="social-icon ml-2 mr-2">
+                            <i class="fab fa-github"></i>
+                            <span class="d-none d-md-inline"> Dahkenangnon</span>
+                        </a>
+                        <a href="https://twitter.com/Dahkenangnon" target="_blank" class="social-icon ml-2 mr-2">
+                            <i class="fab fa-twitter"></i>
+                            <span class="d-none d-md-inline">Dahkenangnon</span>
+                        </a>
+                        <a href="https://youtube.com/@Dahkenangnon" target="_blank" class="social-icon ml-2 mr-2">
+                            <i class="fas fa-play"></i>
+                            <span class="d-none d-md-inline">&nbsp; Dahkenangnon &nbsp;</span>
+                        </a>
+                        <a href="mailto:dah.kenangnon@gmail.com" target="_blank" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                            <span class="d-none d-md-inline">&nbsp; dah.kenangnon@gmail.com</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="social-media mt-2 mb-2 text-center">
-                    <a href="https://github.com/Dahkenangnon" target="_blank" class="social-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://twitter.com/Dahkenangnon" target="_blank" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://youtube.com/@Dahkenangnon" target="_blank" class="social-icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="mailto:dah.kenangnon@gmail.com" target="_blank" class="social-icon">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-
-        </section>
+            </section>
 
 
-        <footer class="footer mt-5">
-            <p>&copy; 2023 Justin Dah-kenangnon </p>
-        </footer>
+            <footer class="footer mt-5">
+                <p>&copy; 2023 Justin Dah-kenangnon </p>
+                <small>* I captured the background image myself in January 2023 in Cotonou, Benin.</small>
+            </footer>
+        </main>
 
 
         <!-- The Modal -->
@@ -339,19 +429,40 @@
             <div id="caption"></div>
         </div>
 
+        <!-- Custom alert -->
+        <div id="custom-alert" class="hidden">
+            <div class="alert-content">
+                <span class="close-button" id="close-alert">&times;</span>
+                <h2 id="title"></h2>
+                <p id="content"></p>
+            </div>
+        </div>
+
     </body>
 
     <script>
-        
+
 
         const footer = document.querySelector('.footer');
-        
+
 
         const socialIcons = document.querySelectorAll('a');
         socialIcons.forEach((socialIcon) => {
-            socialIcon.addEventListener('click', () => {
-                alert('Dah-kenangnon.com:  The link will open in a new tab');
-            });
+            // If a has a target blank, add rel noopenner
+            if (socialIcon.getAttribute('target') === '_blank') {
+                socialIcon.setAttribute('rel', 'noopener');
+
+                socialIcon.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showAlert('Alert!', 'The link will open in a new tab when you close this alert.',
+                    );
+                    closeAlertButton.addEventListener("click", () => {
+                        closeAlert();
+                        window.open(socialIcon.href, '_blank');
+                    });
+
+                });
+            }
         });
 
 
@@ -368,6 +479,20 @@
         var span = document.getElementsByClassName("close")[0];
         span.onclick = function () {
             modal.style.display = "none";
+        }
+
+        const customAlert = document.getElementById("custom-alert");
+        const closeAlertButton = document.getElementById("close-alert");
+        function closeAlert() {
+            customAlert.classList.add("hidden");
+        }
+
+        function showAlert(title, content) {
+            const titleEl = customAlert.querySelector("#title");
+            const contentEl = customAlert.querySelector("#content");
+            titleEl.innerHTML = title;
+            contentEl.innerHTML = content;
+            customAlert.classList.remove("hidden");
         }
     </script>
 
