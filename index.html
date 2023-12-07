@@ -17,385 +17,86 @@
         <link rel="icon" type="image/png" href="assets/img/me.png">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                overflow-x: hidden;
-                /* Avoid horizontal scroll */
-                background-color: #f0f0f0;
-            }
-
-            .navbar {
-                background-color: #2f4338;
-                padding: 10px 20px;
-                box-shadow: 0px -1px 5px 0px rgba(255, 255, 255, 0.2);
-                -webkit-box-shadow: 0px -1px 5px 0px rgba(255, 255, 255, 0.2);
-                -moz-box-shadow: 0px -1px 5px 0px rgba(255, 255, 255, 0.2);
-
-
-
-                box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
-                -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
-                -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
-
-                opacity: 0.9;
-                box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
-            }
-
-            .navbar-brand {
-                color: #fff;
-                font-size: 24px;
-                font-weight: bold;
-
-            }
-
-            .navbar-brand:hover {
-                color: #fff;
-            }
-
-            .navbar .author-title {
-                color: #fff;
-                font-size: 16px;
-                margin: 0;
-                position: absolute;
-                right: 20px;
-                top: 20px;
-            }
-
-            /* Ajust the .author-title hidden on mobile device */
-            @media (max-width: 768px) {
-                .navbar .author-title {
-                    display: none;
-                }
-
-            }
-
-            /** On mobile, hide .brand-name and center .brand-logo in .navbar*/
-            @media (max-width: 768px) {
-                .navbar .brand-name {
-                    display: none;
-                }
-
-                .navbar .brand-logo {
-                    display: block;
-                    margin: auto;
-
-                }
-
-                .navbar-brand {
-                    margin: auto;
-                }
-            }
-
-
-            .content {
-                height: 100%;
-                /* Adjusted to full viewport height */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                color: #000;
-                color: white !important;
-                font-family: Arial, sans-serif;
-                overflow-y: scroll !important;
-
-
-            }
-
-            .content h1 {
-                font-size: 48px;
-                font-weight: bold;
-                margin-bottom: 20px;
-
-            }
-
-            .content p {
-                font-size: 20px;
-                margin-bottom: 40px;
-            }
-
-            .bg-primary {
-                background-color: #2f4338 !important;
-                border-radius: 10px;
-                color: white !important;
-                /** Background color fit text content width */
-                display: inline-block;
-                padding: 10px 20px;
-
-            }
-
-            .footer {
-
-                background-color: #f0f0f0 !important;
-
-                text-align: center;
-                box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
-                -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
-                -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
-                text-align: center;
-                box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-                position: fixed;
-                left: 0;
-                bottom: 0;
-                margin-bottom: 0 !important;
-                width: 100%;
-                padding: 20px !important;
-                padding-top: 20px !important;
-
-
-            }
-
-            .footer p {
-                margin: 0;
-            }
-
-            /* .author-picture-container is cicurlar centered */
-            .author-picture-container {
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                overflow: hidden;
-                margin: 0 auto;
-                margin-top: 100px;
-                border: 5px solid white;
-                -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-                -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-            }
-
-            .author-picture-container:hover {
-                border-color: #f60d0d;
-            }
-
-            .author-picture-container .circle-avatar {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .author-picture-container .circle-avatar:hover {
-                opacity: 0.6;
-            }
-
-            /** On mobile, decrease .author-picture-container size */
-            @media (max-width: 768px) {
-                .author-picture-container {
-                    width: 150px;
-                    height: 150px;
-                    margin-top: 50px;
-                }
-            }
-
-            /** When width size is less than 450px, decrease .author-picture-container size */
-            @media (max-width: 450px) {
-                .author-picture-container {
-                    width: 50px;
-                    height: 50px;
-                    margin-top: 50px;
-                }
-            }
-
-
-            /* The Modal (background) */
-            .modal {
-                display: none;
-                /* Hidden by default */
-                position: fixed;
-                /* Stay in place */
-                z-index: 1;
-                /* Sit on top */
-                padding-top: 100px;
-                /* Location of the box */
-                left: 0;
-                top: 0;
-                width: 100%;
-                /* Full width */
-                height: 100%;
-                /* Full height */
-                overflow: auto;
-                /* Enable scroll if needed */
-                background-color: rgb(0, 0, 0);
-                /* Fallback color */
-                background-color: rgba(0, 0, 0, 0.9);
-                /* Black w/ opacity */
-            }
-
-            /* Modal Content (Image) */
-            .modal-content {
-                margin: auto;
-                display: block;
-                width: 80%;
-                max-width: 700px;
-            }
-
-            /* Caption of Modal Image (Image Text) - Same Width as the Image */
-            #caption {
-                margin: auto;
-                display: block;
-                width: 80%;
-                max-width: 700px;
-                text-align: center;
-                color: #ccc;
-                padding: 10px 0;
-                height: 150px;
-            }
-
-            /* Add Animation - Zoom in the Modal */
-            .modal-content,
-            #caption {
-                animation-name: zoom;
-                animation-duration: 0.6s;
-            }
-
-            @keyframes zoom {
-                from {
-                    transform: scale(0)
-                }
-
-                to {
-                    transform: scale(1)
-                }
-            }
-
-            /* The Close Button */
-            .close {
-                position: absolute;
-                top: 15px;
-                right: 35px;
-                color: #f1f1f1;
-                font-size: 40px;
-                font-weight: bold;
-                transition: 0.3s;
-            }
-
-            .close:hover,
-            .close:focus {
-                color: #bbb;
-                text-decoration: none;
-                cursor: pointer;
-            }
-
-            /* 100% Image Width on Smaller Screens */
-            @media only screen and (max-width: 700px) {
-                .modal-content {
-                    width: 100%;
-                }
-            }
-
-            #referalcode {
-                color: #f60d0d;
-                font-weight: bold;
-            }
-
-            body {
-
-                background-image: url(assets/img/congres.jpg) !important;
-                background-repeat: no-repeat !important;
-
-            }
-
-            .hidden {
-                display: none;
-            }
-
-            #custom-alert {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: #f0f0f0;
-                border: 1px solid #ddd;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                padding: 10px;
-                max-width: 300px;
-                text-align: center;
-                border-radius: 10px;
-                border-width: 3px;
-                border-color: #2f4338;
-                box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-            }
-
-            .close-button {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                cursor: pointer;
-            }
-
-            .alert-content {
-                padding: 20px;
-            }
-
-
-            .social-icon:hover {
-                color: #f60d0d;
-            }
-
-            .social-media {
-                padding-bottom: 20px;
-                box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            }
-
-
-            @media (max-width: 768px) {
-                .social-icon {
-                    font-size: 16px;
-                    margin-right: 10px;
-                    padding: 10px !important;
-                    border-color: white !important;
-                    border-radius: 50% !important;
-                }
-            }
-
-
-
-            .social-icon {
-                color: white;
-                font-size: 20px;
-                border-color: white !important;
-                border-radius: 50% !important;
-            }
-
-            .author-infos {
-                height: fit-content !important;
-            }
-        </style>
+        <link rel="stylesheet" href="assets/css/styles.css">
     </head>
 
     <body>
-
-
-        <nav class="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="/">
-                    <span class="brand-logo"> _ |-| _&nbsp;</span>
-                    <span class="brand-name">Dah-kenangnon</span></a>
-
-                <p class="author-title">Design & Build Software</p>
+        <div class="christmas">
+            <ul class="lightrope">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+        </div>
+        <header>
+            <div class="header">
+              <h1 class="author-name">Justin Dah-kenangnon <sub>Mathematics & Software Engineer </sub> </h1>
+              <p>Software Engineer & CTO @ <a target="_blank" href="https://selys-africa.com">Selys-Africa</a>. Engineer in Modeling and
+                Simulation. <a href="">Read my Resume</a>
+              </p>
             </div>
-        </nav>
+            <div class="topnav">
+              <a href="">Home</a>
+              <a href="#">My Notes</a>
+              <a href="#">My Projects</a>
+              <a href="#">My Resume</a>
+              <a href="" style="float:right">_ |-| _ </a>
+            </div>
+          </header>
         <main class="container-fluid">
             <section class="content mb-5">
 
                 <div class="hero">
 
                     <div class="author-picture-container">
-                        <img id="circle-avatar" src="assets/img/me.png" alt="Justin Dah-kenangnon"
+                        <img id="circle-avatar" src="assets/img/justin_in_studio.jpg" alt="Justin Dah-kenangnon"
                             class="circle-avatar">
                     </div>
                 </div>
                 <div class="author-infos">
                     <div class="mt-2 text-center">
-                        <h2 class="bg-primary">Justin Dah-kenangnon</h2>
+                        <h2 class="bg-primary">Hi!</h2>
                         <br>
-                        <p class="bg-primary">When I'm not coding, I read tech or financial articles or watch
-                            movies.
-                        </p>
+                        <p class="bg-message">Welcome and happy new years ! I'm keeping crafting the new look of my web page. Let's keep in touch: </p>
                     </div>
                     <div class="bg-primary social-media text-center mb-5">
                         <a href="https://github.com/Dahkenangnon" target="_blank" class="social-icon ml-2 mr-2">
@@ -421,8 +122,10 @@
 
 
             <footer class="footer mt-5 mb-0">
-                <p>&copy; 2023 Justin Dah-kenangnon </p>
-                <small>* Captured the background image in January 2023 in Cotonou, Benin.</small>
+                <p>© 2023 Justin Dah-kenangnon</p>
+                <small>Except where otherwise noted, text content on this site is licensed under a <a
+                      target="_blank"  href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0
+                        License.</a></small>
             </footer>
         </main>
 
@@ -442,63 +145,6 @@
                 <p id="content"></p>
             </div>
         </div>
-
+        <script src="assets/js/script.js"></script>
     </body>
-
-    <script>
-
-
-        const footer = document.querySelector('.footer');
-
-
-        const socialIcons = document.querySelectorAll('a');
-        socialIcons.forEach((socialIcon) => {
-            // If a has a target blank, add rel noopenner
-            if (socialIcon.getAttribute('target') === '_blank') {
-                socialIcon.setAttribute('rel', 'noopener');
-
-                socialIcon.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    showAlert('Alert!', 'The link will open in a new tab when you close this alert.',
-                    );
-                    closeAlertButton.addEventListener("click", () => {
-                        closeAlert();
-                        window.open(socialIcon.href, '_blank');
-                    });
-
-                });
-            }
-        });
-
-
-        var modal = document.getElementById("myModal");
-        var img = document.getElementById("circle-avatar");
-        var modalImg = document.getElementById("image-box");
-        var captionText = document.getElementById("caption");
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        const customAlert = document.getElementById("custom-alert");
-        const closeAlertButton = document.getElementById("close-alert");
-        function closeAlert() {
-            customAlert.classList.add("hidden");
-        }
-
-        function showAlert(title, content) {
-            const titleEl = customAlert.querySelector("#title");
-            const contentEl = customAlert.querySelector("#content");
-            titleEl.innerHTML = title;
-            contentEl.innerHTML = content;
-            customAlert.classList.remove("hidden");
-        }
-    </script>
-
 </html>
